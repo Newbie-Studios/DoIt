@@ -20,8 +20,13 @@ class CreateTaskViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     @IBAction func addTapped(_ sender: Any) {
+    let task = Task()
+        task.name = taskNameTextField.text!
+        task.important = importantSwitch.isOn
     }
+    
     
     
     

@@ -60,9 +60,9 @@
 		B73E53D61F76904D00E819B4 /* DoIt */ = {
 			isa = PBXGroup;
 			children = (
-				B73501D01F76B55D000B490F /* CreateTaskViewController.swift */,
 				B73E53D71F76904D00E819B4 /* AppDelegate.swift */,
 				B73E53D91F76904D00E819B4 /* ViewController.swift */,
+				B73501D01F76B55D000B490F /* CreateTaskViewController.swift */,
 				B73E53EC1F76996300E819B4 /* Task.swift */,
 				B73E53DB1F76904D00E819B4 /* Main.storyboard */,
 				B73E53E11F76904D00E819B4 /* Assets.xcassets */,
