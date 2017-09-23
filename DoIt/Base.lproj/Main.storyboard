@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="ZsM-OE-LXC">
             <objects>
-                <viewController id="hyu-s4-0ya" sceneMemberID="viewController">
+                <viewController id="hyu-s4-0ya" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIh-qY-aDy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFS-EZ-J5R"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="z10-bC-5No" id="8GJ-4e-uxf"/>
+                        <outlet property="taskNameTextField" destination="LJQ-lR-R5n" id="uEt-BK-7UK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9d4-wj-7kV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
