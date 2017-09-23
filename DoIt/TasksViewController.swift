@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TasksViewController.swift
 //  DoIt
 //
 //  Created by Jamie Roberts on 23/09/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
    
     @IBOutlet weak var tableView: UITableView!

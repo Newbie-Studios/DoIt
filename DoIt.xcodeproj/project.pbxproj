@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B73501D11F76B55D000B490F /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73501D01F76B55D000B490F /* CreateTaskViewController.swift */; };
 		B73E53D81F76904D00E819B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E53D71F76904D00E819B4 /* AppDelegate.swift */; };
-		B73E53DA1F76904D00E819B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E53D91F76904D00E819B4 /* ViewController.swift */; };
+		B73E53DA1F76904D00E819B4 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73E53D91F76904D00E819B4 /* TasksViewController.swift */; };
 		B73E53DD1F76904D00E819B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B73E53DB1F76904D00E819B4 /* Main.storyboard */; };
 		B73E53E01F76904D00E819B4 /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B73E53DE1F76904D00E819B4 /* DoIt.xcdatamodeld */; };
 		B73E53E21F76904D00E819B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B73E53E11F76904D00E819B4 /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 		B73501D01F76B55D000B490F /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 		B73E53D41F76904D00E819B4 /* DoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B73E53D71F76904D00E819B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B73E53D91F76904D00E819B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B73E53D91F76904D00E819B4 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		B73E53DC1F76904D00E819B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B73E53DF1F76904D00E819B4 /* DoIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoIt.xcdatamodel; sourceTree = "<group>"; };
 		B73E53E11F76904D00E819B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				B73E53D71F76904D00E819B4 /* AppDelegate.swift */,
-				B73E53D91F76904D00E819B4 /* ViewController.swift */,
+				B73E53D91F76904D00E819B4 /* TasksViewController.swift */,
 				B73501D01F76B55D000B490F /* CreateTaskViewController.swift */,
 				B73E53EC1F76996300E819B4 /* Task.swift */,
 				B73E53DB1F76904D00E819B4 /* Main.storyboard */,
@@ -147,7 +147,7 @@
 			files = (
 				B73E53ED1F76996300E819B4 /* Task.swift in Sources */,
 				B73E53E01F76904D00E819B4 /* DoIt.xcdatamodeld in Sources */,
-				B73E53DA1F76904D00E819B4 /* ViewController.swift in Sources */,
+				B73E53DA1F76904D00E819B4 /* TasksViewController.swift in Sources */,
 				B73E53D81F76904D00E819B4 /* AppDelegate.swift in Sources */,
 				B73501D11F76B55D000B490F /* CreateTaskViewController.swift in Sources */,
 			);
