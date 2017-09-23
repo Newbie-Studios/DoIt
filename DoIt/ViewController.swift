@@ -66,5 +66,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     } //create function that includes all our tasks we're making
 
+    @IBAction func plusTapped(_ sender: Any) {
+        performSegue(withIdentifier: "addSegue", sender: nil)
+    }
+
 }
 
