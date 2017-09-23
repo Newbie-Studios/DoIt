@@ -70,5 +70,11 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //add a prepare for segue so that when it segues it can link the two VCs
+        let nextVC = segue.destination as! CreateTaskViewController //create constant called next VC which links to Create VC
+        nextVC.previousVC = self //state that nextVC.previousVC is equal to self (this VC)
+    }
+    
+    
 }
 
