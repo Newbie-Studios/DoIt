@@ -78,9 +78,14 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z10-bC-5No">
                                 <rect key="frame" x="163" y="221" width="51" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-qF-wm8">
+                                <rect key="frame" x="172.5" y="282" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cSn-qF-wm8" firstAttribute="top" secondItem="z10-bC-5No" secondAttribute="bottom" constant="30" id="3iM-j8-Iw7"/>
                             <constraint firstItem="0EF-po-mvW" firstAttribute="top" secondItem="ZFS-EZ-J5R" secondAttribute="top" constant="15" id="Ax8-F8-JCQ"/>
                             <constraint firstItem="Vgy-bu-frq" firstAttribute="top" secondItem="LJQ-lR-R5n" secondAttribute="bottom" constant="30" id="QxQ-CV-ieh"/>
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="W2j-6o-EFi"/>
@@ -91,6 +96,7 @@
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="leading" secondItem="ZFS-EZ-J5R" secondAttribute="leading" constant="40" id="uWk-9U-RWZ"/>
                             <constraint firstItem="ZFS-EZ-J5R" firstAttribute="trailing" secondItem="LJQ-lR-R5n" secondAttribute="trailing" constant="40" id="xog-0S-WSj"/>
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="top" secondItem="0EF-po-mvW" secondAttribute="bottom" constant="20" id="ylG-JO-0QF"/>
+                            <constraint firstItem="cSn-qF-wm8" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="zgC-cB-KKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFS-EZ-J5R"/>
                     </view>
