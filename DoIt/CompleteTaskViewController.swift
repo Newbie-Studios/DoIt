@@ -29,14 +29,10 @@ class CompleteTaskViewController: UIViewController {
 
     @IBAction func completeTapped(_ sender: Any) {
         previousVC.tasks.remove(at: previousVC.selectedIndex) //makes it so the action button removes the item from the array at the selected Index
+        previousVC.tableView.reloadData() //this tells the tableview from the TaskViewController to reload it's data (and add the new info in)
+        navigationController!.popViewController(animated: true) //this will pop the view controller back to the previous screen in the navigation controller
     }
-    
-    
-    
-    
-    
-    
-    
+   
     
     
     override func didReceiveMemoryWarning() {
