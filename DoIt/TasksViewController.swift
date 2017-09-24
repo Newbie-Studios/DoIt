@@ -9,11 +9,13 @@
 import UIKit
 
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-   
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var tasks : [Task] = [] //create a variable called tasks which is of the Task type equal to an empty array
+    
+    var selectedIndex = 0  //create a variable which will be the index of what we've selected so we can mark it Completed
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self //tableview requires a delegate = self
         
     }
- 
+    
     
     //TABLEVIEW ALSO REQUIRES TWO FUNCTION - NUMBER OF ROWS IN SECTION AND CELL FOR ROW AT
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,13 +41,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = UITableViewCell() //cellForRowAt requires a UITableViewCell to be returned so we create constant 'cell'
         let task = tasks[indexPath.row]//create constant task which is equal to indexpath.row of tasks variable
         if task.important {
-                  cell.textLabel?.text = "‼‼ \(task.name) ‼‼"
+            cell.textLabel?.text = "‼‼ \(task.name) ‼‼"
         } else {
-                 cell.textLabel?.text = task.name
+            cell.textLabel?.text = task.name
         } //added an if statement to say if Important flag is true, add some !!, if not don't do that
         return cell //returning that value
     }
-
+    
     
     
     
@@ -65,15 +67,34 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return [task1,task2,task3]
         
     } //create function that includes all our tasks we're making
-
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row //marks the selectedIndex variabl equal to indexpath.row (whatever is pressed)
+        let task = tasks[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "selectTaskSegue", sender: task) //function to allow segue when selecting any option in the table view
+    }
+    
     @IBAction func plusTapped(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //add a prepare for segue so that when it segues it can link the two VCs
-        let nextVC = segue.destination as! CreateTaskViewController //create constant called next VC which links to Create VC
-        nextVC.previousVC = self //state that nextVC.previousVC is equal to self (this VC)
+        if segue.identifier == "addSegue" {
+            let nextVC = segue.destination as! CreateTaskViewController //create constant called next VC which links to Create VC
+            nextVC.previousVC = self
+        } //state that nextVC.previousVC is equal to self (this VC)
+        
+        if segue.identifier == "selectTaskSegue"{
+            let nextVC = segue.destination as! CompleteTaskViewController
+            nextVC.task = sender as! Task
+            nextVC.previousVC = self
+        }
     }
+    
+    
     
     
 }
