@@ -110,40 +110,62 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgy-bu-frq">
-                                <rect key="frame" x="147.5" y="180" width="80" height="21"/>
+                                <rect key="frame" x="147" y="281" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z10-bC-5No">
-                                <rect key="frame" x="163" y="221" width="51" height="31"/>
+                                <rect key="frame" x="163" y="322" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-qF-wm8">
-                                <rect key="frame" x="172.5" y="282" width="30" height="30"/>
+                                <rect key="frame" x="172" y="383" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addTapped:" destination="hyu-s4-0ya" eventType="touchUpInside" id="2DM-tZ-cIP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Due:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l4-eB-ObU">
+                                <rect key="frame" x="149.5" y="180" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PfW-IZ-ASs" userLabel="Date Due Text">
+                                <rect key="frame" x="100" y="221" width="175" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateFieldEditing:" destination="hyu-s4-0ya" eventType="editingDidBegin" id="pRw-ah-VA7"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cSn-qF-wm8" firstAttribute="top" secondItem="z10-bC-5No" secondAttribute="bottom" constant="30" id="3iM-j8-Iw7"/>
                             <constraint firstItem="0EF-po-mvW" firstAttribute="top" secondItem="ZFS-EZ-J5R" secondAttribute="top" constant="15" id="Ax8-F8-JCQ"/>
-                            <constraint firstItem="Vgy-bu-frq" firstAttribute="top" secondItem="LJQ-lR-R5n" secondAttribute="bottom" constant="30" id="QxQ-CV-ieh"/>
+                            <constraint firstItem="8l4-eB-ObU" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="Lh8-21-rd7"/>
+                            <constraint firstItem="PfW-IZ-ASs" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="SlM-Ip-uxJ"/>
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="W2j-6o-EFi"/>
                             <constraint firstItem="0EF-po-mvW" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="WWN-P5-WSu"/>
+                            <constraint firstItem="Vgy-bu-frq" firstAttribute="top" secondItem="PfW-IZ-ASs" secondAttribute="bottom" constant="30" id="XLq-ET-YSE"/>
+                            <constraint firstItem="PfW-IZ-ASs" firstAttribute="top" secondItem="8l4-eB-ObU" secondAttribute="bottom" constant="20" id="a8M-RN-K0W"/>
+                            <constraint firstItem="PfW-IZ-ASs" firstAttribute="leading" secondItem="ZFS-EZ-J5R" secondAttribute="leading" constant="100" id="a9Z-zh-jW9"/>
                             <constraint firstItem="z10-bC-5No" firstAttribute="top" secondItem="Vgy-bu-frq" secondAttribute="bottom" constant="20" id="bT8-OO-zcc"/>
                             <constraint firstItem="Vgy-bu-frq" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="ck9-G3-llf"/>
+                            <constraint firstItem="ZFS-EZ-J5R" firstAttribute="trailing" secondItem="PfW-IZ-ASs" secondAttribute="trailing" constant="100" id="csq-AU-PqW"/>
                             <constraint firstItem="z10-bC-5No" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="sBQ-JA-ne8"/>
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="leading" secondItem="ZFS-EZ-J5R" secondAttribute="leading" constant="40" id="uWk-9U-RWZ"/>
                             <constraint firstItem="ZFS-EZ-J5R" firstAttribute="trailing" secondItem="LJQ-lR-R5n" secondAttribute="trailing" constant="40" id="xog-0S-WSj"/>
+                            <constraint firstItem="8l4-eB-ObU" firstAttribute="top" secondItem="LJQ-lR-R5n" secondAttribute="bottom" constant="30" id="xoy-nd-9wb"/>
                             <constraint firstItem="LJQ-lR-R5n" firstAttribute="top" secondItem="0EF-po-mvW" secondAttribute="bottom" constant="20" id="ylG-JO-0QF"/>
                             <constraint firstItem="cSn-qF-wm8" firstAttribute="centerX" secondItem="XIh-qY-aDy" secondAttribute="centerX" id="zgC-cB-KKd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZFS-EZ-J5R"/>
                     </view>
                     <connections>
+                        <outlet property="dateDue" destination="PfW-IZ-ASs" id="jHy-jR-3Lg"/>
                         <outlet property="importantSwitch" destination="z10-bC-5No" id="8GJ-4e-uxf"/>
                         <outlet property="taskNameTextField" destination="LJQ-lR-R5n" id="uEt-BK-7UK"/>
                     </connections>

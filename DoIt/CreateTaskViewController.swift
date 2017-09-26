@@ -10,9 +10,13 @@ import UIKit
 
 class CreateTaskViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var taskNameTextField: UITextField!
     @IBOutlet weak var importantSwitch: UISwitch!
+    @IBOutlet weak var dateDue: UITextField!
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,7 @@ class CreateTaskViewController: UIViewController {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //allows us to access the CoreData we've created
         let task = Task(context: context) //create a constant called task
         task.name = taskNameTextField.text! //that constants name will be whatever is in the text box
+        task.name = dateDue.text!
         task.important = importantSwitch.isOn //the importance switch will decide what's in there
         (UIApplication.shared.delegate as! AppDelegate).saveContext() //allows us to save the entered data back to the core data
         navigationController!.popViewController(animated: true) //this will pop the view controller back to the previous screen in the navigation controller
